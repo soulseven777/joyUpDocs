@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <link rel="shortcut icon" href="assets/logo2.png" type="image/x-icon" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
+  <style>
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(-24px);
+    }
+
+    .logo {
+      width: 36px;
+      margin-right: 12px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">loading...</div>
+  <script>
+    const titleHtml = `
+      <div class='flex'>
+        <img src="/assets/logo2.png" class="logo" alt="JoyUp Docs">
+        <span>JoyUp Docs</span>
+      </div>
+      `;
+    window.$docsify = {
+      maxLevel: 4,
+      coverpage: true,
+      loadNavbar: true,
+      name: titleHtml,
+      nameLink: "/#/guide",
+      routerMode: "hash", // history
+      onlyCover: true,
+      notFoundPage: true,
+      search: {
+        hideOtherSidebarContent: true,
+        depth: 6, // 1-6
+        placeholder: '搜索',
+        noData: '大概是没有东西给你看的！',
+       
+      }, // 默认值
+      count: {
+        countable: true,
+        fontsize: "0.9em",
+        color: "rgb(90,90,90)",
+        language: "chinese",
+      },
+      topMargin: 20
+    };
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+</body>
+</html>
